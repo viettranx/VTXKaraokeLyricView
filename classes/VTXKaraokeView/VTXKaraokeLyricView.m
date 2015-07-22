@@ -130,6 +130,7 @@ static NSString *animationKey = @"runLyric";
     CFTimeInterval pauseTime = layer.timeOffset;
     layer.speed = 1.0;
     layer.timeOffset = 0.0;
+    layer.beginTime = 0.0;
     layer.beginTime = [layer convertTime:CACurrentMediaTime() fromLayer: nil] - pauseTime;
 }
 
