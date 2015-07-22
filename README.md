@@ -25,11 +25,11 @@ This config will change the content of your lyric label and run key frame animat
 ```
 basicLyric.lyricSegment = @{
                                        	// Spend a half of duration for this string
-                                        @0.5: @"Karaoke ",
+                                        @"0.5": @"Karaoke ",
                                         // 20% of duration for this string
-                                        @0.7: @"lyric label ",
+                                        @"0.7": @"lyric label ",
                                         // 30% of duration for the rest
-                                        @1.0: @"with key times"
+                                        @"1.0": @"with key times"
                                         };
   ```
 

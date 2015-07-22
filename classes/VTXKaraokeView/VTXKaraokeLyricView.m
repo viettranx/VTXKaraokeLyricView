@@ -102,7 +102,7 @@ static NSString *animationKey = @"runLyric";
 - (void)setText:(NSString *)text {
     [super setText:text];
     [self sizeToFit];
-    //[self setNeedsLayout];
+    [self setNeedsLayout];
     [self prepareLyricLayerForLabel:self];
 }
  
