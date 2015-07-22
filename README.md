@@ -2,7 +2,7 @@
 An animation change foreground color lyric color for karaoke apps.
 
 ## Screenshot
-<img src="https://www.dropbox.com/s/sb9afpaqui9kqwg/Screenshot%202015-07-22%2016.05.52.png?raw=1" />
+<img src="https://www.dropbox.com/s/6n0dxw0hbns1kxs/vtx_karaoke_lyric.gif?raw=1" />
 
 ## Usage
 - Import folder VTXKaraokeView classes into your project and import header:
