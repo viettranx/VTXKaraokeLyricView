@@ -52,11 +52,6 @@ static NSString *animationKey = @"runLyric";
         [textLayer removeFromSuperlayer];
     }
     
-    NSDictionary *dict = @{ @0.5 : @"Em di xa qua" };
-    [dict allValues];
-    
-    
-    
     // just for one line, not support for multi lines label
     label.numberOfLines = 1;
     
