@@ -16,8 +16,8 @@ It is a subclass from UILabel, so you can use all UILabel properties such as: Fo
 ```
 VTXKaraokeLyricView *basicLyric = [[VTXKaraokeLyricView alloc] init];
     [basicLyric setText:@"This is the content for lyric view"];
-    self.lyricView.fillTextColor = [UIColor redColor];
-    self.lyricView.duration = 5.0f;
+    basicLyric.fillTextColor = [UIColor redColor];
+    basicLyric.duration = 5.0f;
   ```
 ### For the key time animation
 This config will change the content of your lyric label and run key frame animation (CAKeyframeAnimation)
