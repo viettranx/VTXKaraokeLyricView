@@ -19,7 +19,7 @@
 @end
 
 @implementation VTXKaraokeLyricView
-@synthesize fillTextColor, lyricSegment;
+@synthesize normalTextColor, normalTextOutlineColor, activeTextColor, activeTextOutlineColor, lyricSegment;
 
 static NSString *animationKey = @"runLyric";
 
@@ -47,7 +47,22 @@ static NSString *animationKey = @"runLyric";
     return self;
 }
 
+- (void)drawTextInRect:(CGRect)rect {
+	CGContextRef context = UIGraphicsGetCurrentContext();
+	CGContextSaveGState(context);
+	CGContextSetShadow(context, CGSizeMake(0.0, 0.0), 4.0);
+	CGContextSetShadowWithColor(context, CGSizeMake(0.0, 0.0), 4.0, normalTextOutlineColor.CGColor);
+	[super drawTextInRect:rect];
+	CGContextRestoreGState(context);
+}
+
 - (void)prepareLyricLayerForLabel:(UILabel *)label {
+	
+	normalTextColor = [UIColor whiteColor];
+	normalTextOutlineColor = [UIColor blackColor];
+	activeTextColor = [UIColor blueColor];
+	activeTextOutlineColor = [UIColor whiteColor];
+	
     if(textLayer) {
         [textLayer removeFromSuperlayer];
     }
@@ -59,17 +74,23 @@ static NSString *animationKey = @"runLyric";
     
     // just for one line, not support for multi lines label
     label.numberOfLines = 1;
+	label.textColor = normalTextColor;
     
     textLayer = [CATextLayer layer];
     textLayer.frame = label.bounds;
     
     // Fill color
     textLayer.foregroundColor = fillTextColor.CGColor;
-    
+	
+	NSDictionary *customizeAttributedString = @{NSFontAttributeName: label.font,
+												(NSString*)kCTForegroundColorAttributeName: (id)activeTextColor.CGColor,
+												(NSString*)kCTStrokeWidthAttributeName: @(-5.0),
+												(NSString*)kCTStrokeColorAttributeName: (id)activeTextOutlineColor.CGColor};
+	
     UIFont *textFont = label.font;
     textLayer.font = CGFontCreateWithFontName((CFStringRef) textFont.fontName);
     textLayer.fontSize = textFont.pointSize;
-    textLayer.string = label.text;
+    textLayer.string = [[NSAttributedString alloc] initWithString:label.text attributes:customizeAttributedString];
     textLayer.contentsScale = [UIScreen mainScreen].scale;
     textLayer.masksToBounds = true;
     // Set anchorPoint to left and layer will expand to right
