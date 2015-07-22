@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfx-RI-JY5">
+                                <rect key="frame" x="284" y="232" width="33" height="30"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toogleAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pZ9-S8-4aE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am basic karaoke lyric label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wvg-iR-jTP" customClass="VTXKaraokeLyricView">
+                                <rect key="frame" x="182" y="203" width="236" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Karaoke lyric label with key times" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUa-eP-Cek" customClass="VTXKaraokeLyricView">
+                                <rect key="frame" x="164" y="300" width="272" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29p-Rl-7nN">
+                                <rect key="frame" x="284" y="331" width="33" height="30"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toogleKTAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="So0-I3-Fia"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="dUa-eP-Cek" secondAttribute="centerX" id="0cs-nc-3PI"/>
+                            <constraint firstItem="bfx-RI-JY5" firstAttribute="top" secondItem="Wvg-iR-jTP" secondAttribute="bottom" constant="8" id="3vv-cH-yrE"/>
+                            <constraint firstAttribute="centerX" secondItem="Wvg-iR-jTP" secondAttribute="centerX" id="6tB-Qr-43R"/>
+                            <constraint firstAttribute="centerY" secondItem="dUa-eP-Cek" secondAttribute="centerY" constant="-10" id="U49-zb-scB"/>
+                            <constraint firstAttribute="centerY" secondItem="bfx-RI-JY5" secondAttribute="centerY" constant="53" id="VKT-8C-C6M"/>
+                            <constraint firstItem="29p-Rl-7nN" firstAttribute="top" secondItem="dUa-eP-Cek" secondAttribute="bottom" constant="10" id="YXB-GF-ZaD"/>
+                            <constraint firstAttribute="centerX" secondItem="29p-Rl-7nN" secondAttribute="centerX" id="wbM-aj-NMU"/>
+                            <constraint firstAttribute="centerX" secondItem="bfx-RI-JY5" secondAttribute="centerX" id="ycu-wV-2yq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="keyTimeLyricView" destination="dUa-eP-Cek" id="AY3-oL-WIj"/>
+                        <outlet property="lyricView" destination="Wvg-iR-jTP" id="FSI-EN-scg"/>
+                        <outlet property="startButton" destination="bfx-RI-JY5" id="LsG-hW-6V3"/>
+                        <outlet property="startKTButton" destination="29p-Rl-7nN" id="wfw-Qp-sY4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

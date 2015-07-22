@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:BasicKaraokeLabelDemo/BasicKaraokeLabelDemo.xcodeproj">
+   </FileRef>
+   <Group
+      location = "container:classes"
+      name = "Classes">
+      <Group
+         location = "container:classes/VTXKaraokeView"
+         name = "VTXKaraokeView">
+         <FileRef
+            location = "group:VTXKaraokeLyricView.h">
+         </FileRef>
+         <FileRef
+            location = "group:VTXKaraokeLyricView.m">
+         </FileRef>
+      </Group>
+   </Group>
+</Workspace>
