@@ -12,10 +12,7 @@
 @protocol VTXKaraokeLyricViewDelegate;
 
 @interface VTXKaraokeLyricView : UILabel
-@property (strong, nonatomic) UIColor *activeTextColor;
-@property (strong, nonatomic) UIColor *activeTextOutlineColor;
-@property (strong, nonatomic) UIColor *normalTextColor;
-@property (strong, nonatomic) UIColor *normalTextOutlineColor;
+@property (strong, nonatomic) UIColor *fillTextColor;
 @property (nonatomic) CGFloat duration;
 @property (nonatomic) NSDictionary *lyricSegment;
 @property (weak, nonatomic) id<VTXKaraokeLyricViewDelegate> delegate;

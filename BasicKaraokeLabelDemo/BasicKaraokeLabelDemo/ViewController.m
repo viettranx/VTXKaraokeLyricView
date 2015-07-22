@@ -24,12 +24,12 @@
     [super viewDidLoad];
     
     // Some configs for the basic lyric view
-    self.lyricView.activeTextColor = [UIColor redColor];
+    self.lyricView.fillTextColor = [UIColor redColor];
     self.lyricView.duration = 5.0f;
     self.lyricView.delegate = self;
     
     // Some configs for the key times lyric view
-    self.keyTimeLyricView.activeTextColor = [UIColor greenColor];
+    self.keyTimeLyricView.fillTextColor = [UIColor greenColor];
     
     self.keyTimeLyricView.lyricSegment = @{
                                            // Spend a half of duration for this string
