@@ -59,7 +59,7 @@ static NSString *animationKey = @"runLyric";
     textLayer.frame = label.bounds;
     
     // Fill color
-    textLayer.foregroundColor = fillTextColor.CGColor;
+    textLayer.foregroundColor = fillTextColor ? fillTextColor.CGColor : [UIColor blueColor].CGColor;
     
     UIFont *textFont = label.font;
     textLayer.font = CGFontCreateWithFontName((CFStringRef) textFont.fontName);
