@@ -24,12 +24,7 @@
 static NSString *animationKey = @"runLyric";
 
 #pragma mark - Initial methods
-- (instancetype)init {
-    if(self = [super init]) {
-        [self prepareLyricLayerForLabel:self];
-    }
-    return self;
-}
+
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
@@ -79,6 +74,10 @@ static NSString *animationKey = @"runLyric";
 #pragma mark - Animation
 
 - (CAKeyframeAnimation*)animationForTextLayer:(CALayer *)layer {
+    if (layer == nil) {
+        [self prepareLyricLayerForLabel:self];
+    }
+    
     layer.hidden = false;
     
     CAKeyframeAnimation *textAnimation = [CAKeyframeAnimation animationWithKeyPath:@"bounds.size.width"];
@@ -96,11 +95,14 @@ static NSString *animationKey = @"runLyric";
 // Override setText from super
 - (void)setText:(NSString *)text {
     [super setText:text];
-    [self sizeToFit];
-    [self setNeedsLayout];
-    [self prepareLyricLayerForLabel:self];
+    [self updateLayer];
 }
- 
+
+- (void)setFont:(UIFont *)font {
+    [super setFont:font];
+    [self updateLayer];
+}
+
 - (void)setFillTextColor:(UIColor *)color {
     textLayer.foregroundColor = color.CGColor;
     fillTextColor = color;
@@ -113,6 +115,12 @@ static NSString *animationKey = @"runLyric";
 }
 
 #pragma mark - Utility methods
+
+- (void)updateLayer {
+    [self sizeToFit];
+    [self setNeedsLayout];
+    [self prepareLyricLayerForLabel:self];
+}
 
 - (void)pauseLayer:(CALayer*)layer {
     
