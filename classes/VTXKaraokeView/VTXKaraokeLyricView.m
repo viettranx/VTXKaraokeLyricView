@@ -110,8 +110,16 @@ static NSString *animationKey = @"runLyric";
 
 - (void)setLyricSegment:(NSDictionary *)l_segment {
     lyricSegment = l_segment;
-    NSString *fullLyricStr = [[l_segment allValues] componentsJoinedByString:@""];
-    [self setText:fullLyricStr];
+    
+    // FIX: key sorted by time asc
+    NSArray* sortedKeys = [self sortedKeyFromDictionary:l_segment];
+    
+    NSString *fullText = @"";
+    for (NSString *k in sortedKeys) {
+        fullText = [fullText stringByAppendingString:[l_segment objectForKey:k]];
+    }
+    
+    [self setText:fullText];
 }
 
 #pragma mark - Utility methods
@@ -137,6 +145,14 @@ static NSString *animationKey = @"runLyric";
     layer.beginTime = [layer convertTime:CACurrentMediaTime() fromLayer: nil] - pauseTime;
 }
 
+- (NSArray *)sortedKeyFromDictionary:(NSDictionary *)dict {
+    NSArray* sortedKeys = [[dict allKeys] sortedArrayUsingComparator:^(id a, id b) {
+        return [a compare:b options:NSNumericSearch];
+    }];
+    
+    return sortedKeys;
+}
+
 - (NSArray*)valuesFromLyricSegment {
     NSArray *values;
     CGFloat widthOfLayer = textLayer.bounds.size.width;
@@ -147,10 +163,10 @@ static NSString *animationKey = @"runLyric";
         NSMutableArray *LyricParts = [[NSMutableArray alloc] init];
         [LyricParts addObject:@0.0];
         
-        
-        NSArray *strs = [lyricSegment allValues];
+        NSArray* sortedKeys = [self sortedKeyFromDictionary:lyricSegment];
         CGFloat val = 0;
-        for (NSString *str in strs) {
+        for (NSString *k in sortedKeys) {
+            NSString *str = [lyricSegment objectForKey:k];
             CGFloat strWidth = [str sizeWithAttributes:@{NSFontAttributeName: self.font}].width;
             val = val + strWidth;
             [LyricParts addObject:@(val)];
@@ -158,7 +174,6 @@ static NSString *animationKey = @"runLyric";
         
         // To ensure animation go through all label, we add the full width of text layer
         [LyricParts addObject:@(widthOfLayer)];
-        
         values = LyricParts;
     } else {
         values = @[@0.0, @(widthOfLayer)];
@@ -171,8 +186,8 @@ static NSString *animationKey = @"runLyric";
     NSArray *keyTimes;
     
     if(lyricSegment) {
-        
-        NSMutableArray *lyricTimes = [[NSMutableArray alloc] initWithArray:[lyricSegment allKeys]];
+        NSArray* sortedKeys = [self sortedKeyFromDictionary:lyricSegment];
+        NSMutableArray *lyricTimes = [[NSMutableArray alloc] initWithArray:sortedKeys];
         // Key time always starts at zero
         [lyricTimes insertObject:@0.0 atIndex:0];
         // And end at 1.0
