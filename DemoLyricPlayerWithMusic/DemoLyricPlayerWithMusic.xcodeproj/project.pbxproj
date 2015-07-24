@@ -9,13 +9,22 @@
 /* Begin PBXBuildFile section */
 		FC6ADB481B608ECB00F37FBD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6ADB471B608ECB00F37FBD /* main.m */; };
 		FC6ADB4B1B608ECB00F37FBD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6ADB4A1B608ECB00F37FBD /* AppDelegate.m */; };
-		FC6ADB4E1B608ECB00F37FBD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6ADB4D1B608ECB00F37FBD /* ViewController.m */; };
+		FC6ADB4E1B608ECB00F37FBD /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6ADB4D1B608ECB00F37FBD /* AboutViewController.m */; };
 		FC6ADB511B608ECB00F37FBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC6ADB4F1B608ECB00F37FBD /* Main.storyboard */; };
 		FC6ADB531B608ECB00F37FBD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC6ADB521B608ECB00F37FBD /* Images.xcassets */; };
 		FC6ADB561B608ECB00F37FBD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC6ADB541B608ECB00F37FBD /* LaunchScreen.xib */; };
 		FC6ADB621B608ECB00F37FBD /* DemoLyricPlayerWithMusicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6ADB611B608ECB00F37FBD /* DemoLyricPlayerWithMusicTests.m */; };
 		FC6ADB721B608EE300F37FBD /* VTXLyricPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6ADB6C1B608EE300F37FBD /* VTXLyricPlayerView.m */; };
 		FC6ADB731B608EE300F37FBD /* VTXKaraokeLyricView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6ADB6F1B608EE300F37FBD /* VTXKaraokeLyricView.m */; };
+		FC6ADB751B60A26A00F37FBD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6ADB741B60A26A00F37FBD /* AVFoundation.framework */; };
+		FC6ADB791B61A2FB00F37FBD /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6ADB781B61A2FB00F37FBD /* RootViewController.m */; };
+		FC6ADB7C1B61ED0200F37FBD /* PlayMusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6ADB7B1B61ED0200F37FBD /* PlayMusicViewController.m */; };
+		FC6ADB7F1B61F70F00F37FBD /* tbmhr.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC6ADB7E1B61F70F00F37FBD /* tbmhr.mp3 */; };
+		FC6ADB851B61F86900F37FBD /* VTXLyric.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6ADB841B61F86900F37FBD /* VTXLyric.m */; };
+		FC6ADB8F1B62033700F37FBD /* VTXLyricParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6ADB8E1B62033700F37FBD /* VTXLyricParser.m */; };
+		FCCCBE6A1B6220DC0017EC06 /* thai_binh_mo_hoi_roi.lrc in Resources */ = {isa = PBXBuildFile; fileRef = FCCCBE691B6220DC0017EC06 /* thai_binh_mo_hoi_roi.lrc */; };
+		FCCCBE6C1B624C580017EC06 /* my_everything.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FCCCBE6B1B624C580017EC06 /* my_everything.mp3 */; };
+		FCCCBE6E1B624D030017EC06 /* my_everything.lrc in Resources */ = {isa = PBXBuildFile; fileRef = FCCCBE6D1B624D030017EC06 /* my_everything.lrc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,8 +43,8 @@
 		FC6ADB471B608ECB00F37FBD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FC6ADB491B608ECB00F37FBD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FC6ADB4A1B608ECB00F37FBD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FC6ADB4C1B608ECB00F37FBD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FC6ADB4D1B608ECB00F37FBD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FC6ADB4C1B608ECB00F37FBD /* AboutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		FC6ADB4D1B608ECB00F37FBD /* AboutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		FC6ADB501B608ECB00F37FBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC6ADB521B608ECB00F37FBD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FC6ADB551B608ECB00F37FBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -46,6 +55,19 @@
 		FC6ADB6C1B608EE300F37FBD /* VTXLyricPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTXLyricPlayerView.m; sourceTree = "<group>"; };
 		FC6ADB6E1B608EE300F37FBD /* VTXKaraokeLyricView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTXKaraokeLyricView.h; sourceTree = "<group>"; };
 		FC6ADB6F1B608EE300F37FBD /* VTXKaraokeLyricView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTXKaraokeLyricView.m; sourceTree = "<group>"; };
+		FC6ADB741B60A26A00F37FBD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		FC6ADB771B61A2FB00F37FBD /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		FC6ADB781B61A2FB00F37FBD /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		FC6ADB7A1B61ED0200F37FBD /* PlayMusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayMusicViewController.h; sourceTree = "<group>"; };
+		FC6ADB7B1B61ED0200F37FBD /* PlayMusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayMusicViewController.m; sourceTree = "<group>"; };
+		FC6ADB7E1B61F70F00F37FBD /* tbmhr.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tbmhr.mp3; sourceTree = "<group>"; };
+		FC6ADB831B61F86900F37FBD /* VTXLyric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTXLyric.h; sourceTree = "<group>"; };
+		FC6ADB841B61F86900F37FBD /* VTXLyric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTXLyric.m; sourceTree = "<group>"; };
+		FC6ADB8D1B62033700F37FBD /* VTXLyricParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTXLyricParser.h; sourceTree = "<group>"; };
+		FC6ADB8E1B62033700F37FBD /* VTXLyricParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTXLyricParser.m; sourceTree = "<group>"; };
+		FCCCBE691B6220DC0017EC06 /* thai_binh_mo_hoi_roi.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = thai_binh_mo_hoi_roi.lrc; sourceTree = "<group>"; };
+		FCCCBE6B1B624C580017EC06 /* my_everything.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = my_everything.mp3; sourceTree = "<group>"; };
+		FCCCBE6D1B624D030017EC06 /* my_everything.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = my_everything.lrc; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC6ADB751B60A26A00F37FBD /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,7 +92,11 @@
 		FC6ADB391B608ECB00F37FBD = {
 			isa = PBXGroup;
 			children = (
+				FC6ADB741B60A26A00F37FBD /* AVFoundation.framework */,
 				FC6ADB441B608ECB00F37FBD /* DemoLyricPlayerWithMusic */,
+				FC6ADB761B61A2B700F37FBD /* View Controllers */,
+				FC6ADB7D1B61F6E500F37FBD /* Music Files */,
+				FC6ADB861B61F9C900F37FBD /* Lyrics */,
 				FC6ADB5E1B608ECB00F37FBD /* DemoLyricPlayerWithMusicTests */,
 				FC6ADB431B608ECB00F37FBD /* Products */,
 			);
@@ -90,8 +117,6 @@
 				FC6ADB711B608EE300F37FBD /* Classes */,
 				FC6ADB491B608ECB00F37FBD /* AppDelegate.h */,
 				FC6ADB4A1B608ECB00F37FBD /* AppDelegate.m */,
-				FC6ADB4C1B608ECB00F37FBD /* ViewController.h */,
-				FC6ADB4D1B608ECB00F37FBD /* ViewController.m */,
 				FC6ADB4F1B608ECB00F37FBD /* Main.storyboard */,
 				FC6ADB521B608ECB00F37FBD /* Images.xcassets */,
 				FC6ADB541B608ECB00F37FBD /* LaunchScreen.xib */,
@@ -131,6 +156,10 @@
 			children = (
 				FC6ADB6B1B608EE300F37FBD /* VTXLyricPlayerView.h */,
 				FC6ADB6C1B608EE300F37FBD /* VTXLyricPlayerView.m */,
+				FC6ADB831B61F86900F37FBD /* VTXLyric.h */,
+				FC6ADB841B61F86900F37FBD /* VTXLyric.m */,
+				FC6ADB8D1B62033700F37FBD /* VTXLyricParser.h */,
+				FC6ADB8E1B62033700F37FBD /* VTXLyricParser.m */,
 			);
 			path = VTXLyricPlayerView;
 			sourceTree = "<group>";
@@ -152,6 +181,40 @@
 			);
 			name = Classes;
 			path = ../../classes;
+			sourceTree = "<group>";
+		};
+		FC6ADB761B61A2B700F37FBD /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FC6ADB4C1B608ECB00F37FBD /* AboutViewController.h */,
+				FC6ADB4D1B608ECB00F37FBD /* AboutViewController.m */,
+				FC6ADB771B61A2FB00F37FBD /* RootViewController.h */,
+				FC6ADB781B61A2FB00F37FBD /* RootViewController.m */,
+				FC6ADB7A1B61ED0200F37FBD /* PlayMusicViewController.h */,
+				FC6ADB7B1B61ED0200F37FBD /* PlayMusicViewController.m */,
+			);
+			name = "View Controllers";
+			path = DemoLyricPlayerWithMusic;
+			sourceTree = "<group>";
+		};
+		FC6ADB7D1B61F6E500F37FBD /* Music Files */ = {
+			isa = PBXGroup;
+			children = (
+				FCCCBE6B1B624C580017EC06 /* my_everything.mp3 */,
+				FC6ADB7E1B61F70F00F37FBD /* tbmhr.mp3 */,
+			);
+			name = "Music Files";
+			path = "DemoLyricPlayerWithMusic/Music Files";
+			sourceTree = "<group>";
+		};
+		FC6ADB861B61F9C900F37FBD /* Lyrics */ = {
+			isa = PBXGroup;
+			children = (
+				FCCCBE6D1B624D030017EC06 /* my_everything.lrc */,
+				FCCCBE691B6220DC0017EC06 /* thai_binh_mo_hoi_roi.lrc */,
+			);
+			name = Lyrics;
+			path = DemoLyricPlayerWithMusic/Lyrics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +299,11 @@
 			files = (
 				FC6ADB511B608ECB00F37FBD /* Main.storyboard in Resources */,
 				FC6ADB561B608ECB00F37FBD /* LaunchScreen.xib in Resources */,
+				FCCCBE6E1B624D030017EC06 /* my_everything.lrc in Resources */,
 				FC6ADB531B608ECB00F37FBD /* Images.xcassets in Resources */,
+				FCCCBE6A1B6220DC0017EC06 /* thai_binh_mo_hoi_roi.lrc in Resources */,
+				FC6ADB7F1B61F70F00F37FBD /* tbmhr.mp3 in Resources */,
+				FCCCBE6C1B624C580017EC06 /* my_everything.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,7 +322,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC6ADB721B608EE300F37FBD /* VTXLyricPlayerView.m in Sources */,
-				FC6ADB4E1B608ECB00F37FBD /* ViewController.m in Sources */,
+				FC6ADB8F1B62033700F37FBD /* VTXLyricParser.m in Sources */,
+				FC6ADB4E1B608ECB00F37FBD /* AboutViewController.m in Sources */,
+				FC6ADB851B61F86900F37FBD /* VTXLyric.m in Sources */,
+				FC6ADB791B61A2FB00F37FBD /* RootViewController.m in Sources */,
+				FC6ADB7C1B61ED0200F37FBD /* PlayMusicViewController.m in Sources */,
 				FC6ADB731B608EE300F37FBD /* VTXKaraokeLyricView.m in Sources */,
 				FC6ADB4B1B608ECB00F37FBD /* AppDelegate.m in Sources */,
 				FC6ADB481B608ECB00F37FBD /* main.m in Sources */,
@@ -453,6 +524,7 @@
 				FC6ADB671B608ECB00F37FBD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC6ADB681B608ECB00F37FBD /* Build configuration list for PBXNativeTarget "DemoLyricPlayerWithMusicTests" */ = {
 			isa = XCConfigurationList;
@@ -461,6 +533,7 @@
 				FC6ADB6A1B608ECB00F37FBD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

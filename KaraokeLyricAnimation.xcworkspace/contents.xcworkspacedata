@@ -19,6 +19,18 @@
          <FileRef
             location = "group:VTXLyricPlayerView.m">
          </FileRef>
+         <FileRef
+            location = "group:VTXLyric.h">
+         </FileRef>
+         <FileRef
+            location = "group:VTXLyric.m">
+         </FileRef>
+         <FileRef
+            location = "group:VTXLyricParser.h">
+         </FileRef>
+         <FileRef
+            location = "group:VTXLyricParser.m">
+         </FileRef>
       </Group>
       <Group
          location = "container:classes/VTXKaraokeView"
