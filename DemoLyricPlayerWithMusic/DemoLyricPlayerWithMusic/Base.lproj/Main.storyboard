@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="KRh-Uq-14m">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Demo Lyric Karaoke-->
+        <scene sceneID="ZMj-nT-icg">
+            <objects>
+                <tableViewController id="DNR-tX-Zzz" customClass="RootViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="QXh-KM-4MR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell" textLabel="NnQ-Lj-NOs" detailTextLabel="Xeb-lP-izj" style="IBUITableViewCellStyleSubtitle" id="6j7-1M-DuS">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6j7-1M-DuS" id="ggC-f6-LBb">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NnQ-Lj-NOs">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Xeb-lP-izj">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="DNR-tX-Zzz" id="WSi-uh-CbM"/>
+                            <outlet property="delegate" destination="DNR-tX-Zzz" id="9jC-aD-hkI"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Demo Lyric Karaoke" id="Jq6-iI-Q4r">
+                        <barButtonItem key="backBarButtonItem" title=" " id="p4T-Eh-Eva"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zQe-0B-WY3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="321" y="-237"/>
+        </scene>
+        <!--Play Music View Controller-->
+        <scene sceneID="cWK-6i-ayJ">
+            <objects>
+                <viewController storyboardIdentifier="playMusicVC" id="hJO-4q-mvT" customClass="PlayMusicViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="V4O-EG-kDu"/>
+                        <viewControllerLayoutGuide type="bottom" id="uLO-h4-YbK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Wj-RD-aPI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xyN-ke-4je" customClass="VTXLyricPlayerView">
+                                <rect key="frame" x="0.0" y="535" width="600" height="65"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="QCJ-KK-v48"/>
+                                </constraints>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="HZo-vB-Wvh">
+                                <rect key="frame" x="14" y="497" width="572" height="31"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="hJO-4q-mvT" eventType="valueChanged" id="qJp-g8-7G6"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ut-p9-GSm">
+                                <rect key="frame" x="285" y="445" width="30" height="30"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toogleTouched:" destination="hJO-4q-mvT" eventType="touchUpInside" id="Y86-ZR-qT6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="2Ut-p9-GSm" secondAttribute="centerX" id="4pT-gV-h2h"/>
+                            <constraint firstAttribute="trailing" secondItem="xyN-ke-4je" secondAttribute="trailing" id="AZE-Eg-bOh"/>
+                            <constraint firstItem="HZo-vB-Wvh" firstAttribute="top" secondItem="2Ut-p9-GSm" secondAttribute="bottom" constant="22" id="INO-41-gka"/>
+                            <constraint firstItem="uLO-h4-YbK" firstAttribute="top" secondItem="xyN-ke-4je" secondAttribute="bottom" id="cMF-fx-2Qz"/>
+                            <constraint firstItem="xyN-ke-4je" firstAttribute="leading" secondItem="3Wj-RD-aPI" secondAttribute="leading" id="kBA-EA-BTK"/>
+                            <constraint firstItem="xyN-ke-4je" firstAttribute="top" secondItem="HZo-vB-Wvh" secondAttribute="bottom" constant="8" id="otN-zl-3Lk"/>
+                            <constraint firstItem="HZo-vB-Wvh" firstAttribute="leading" secondItem="3Wj-RD-aPI" secondAttribute="leading" constant="16" id="s8B-ub-Uq4"/>
+                            <constraint firstAttribute="trailing" secondItem="HZo-vB-Wvh" secondAttribute="trailing" constant="16" id="sb8-d8-KxQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lyricPlayer" destination="xyN-ke-4je" id="htB-C3-P2w"/>
+                        <outlet property="slider" destination="HZo-vB-Wvh" id="ZCM-Yh-9mP"/>
+                        <outlet property="toogleButton" destination="2Ut-p9-GSm" id="Nt8-zf-VzS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oaP-uQ-xrV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="985" y="-237"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QbJ-5Z-KWU">
+            <objects>
+                <navigationController id="KRh-Uq-14m" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DCq-hH-Y7Q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="DNR-tX-Zzz" kind="relationship" relationship="rootViewController" id="u22-WL-GyC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ouR-1g-k59" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-499" y="-237"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController storyboardIdentifier="aboutVC" id="vXZ-lx-hvc" customClass="AboutViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="plS-XA-5lK" customClass="VTXLyricPlayerView">
+                                <rect key="frame" x="0.0" y="267" width="600" height="65"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="087-yF-bxu"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="plS-XA-5lK" secondAttribute="trailing" id="4Vt-wQ-PbE"/>
+                            <constraint firstAttribute="centerY" secondItem="plS-XA-5lK" secondAttribute="centerY" id="MZK-7F-spk"/>
+                            <constraint firstItem="plS-XA-5lK" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="PKK-ji-DrF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lyricPlayerView" destination="plS-XA-5lK" id="GWv-7x-lba"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="321" y="419"/>
+        </scene>
+    </scenes>
+</document>
