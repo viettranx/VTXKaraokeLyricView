@@ -2,11 +2,24 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:DemoLyricPlayerWithMusic/DemoLyricPlayerWithMusic.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:BasicKaraokeLabelDemo/BasicKaraokeLabelDemo.xcodeproj">
    </FileRef>
    <Group
       location = "container:classes"
       name = "Classes">
+      <Group
+         location = "container:classes/VTXLyricPlayerView"
+         name = "VTXLyricPlayerView">
+         <FileRef
+            location = "group:VTXLyricPlayerView.h">
+         </FileRef>
+         <FileRef
+            location = "group:VTXLyricPlayerView.m">
+         </FileRef>
+      </Group>
       <Group
          location = "container:classes/VTXKaraokeView"
          name = "VTXKaraokeView">
