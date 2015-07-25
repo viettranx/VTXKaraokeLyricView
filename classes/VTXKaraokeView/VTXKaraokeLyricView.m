@@ -50,7 +50,7 @@ static NSString *animationKey = @"runLyric";
     // just for one line, not support for multi lines label
     label.numberOfLines = 1;
     label.clipsToBounds = YES;
-    label.textAlignment = NSTextAlignmentCenter;
+    label.textAlignment = NSTextAlignmentLeft;
     label.baselineAdjustment = UIBaselineAdjustmentAlignBaselines;
     
     textLayer = [CATextLayer layer];
@@ -65,6 +65,7 @@ static NSString *animationKey = @"runLyric";
     textLayer.string = label.text;
     textLayer.contentsScale = [UIScreen mainScreen].scale;
     textLayer.masksToBounds = true;
+    
     // Set anchorPoint to left and layer will expand to right
     textLayer.anchorPoint = CGPointMake(0, 0.5);
     // Update layer frame to match with the label and hide it
