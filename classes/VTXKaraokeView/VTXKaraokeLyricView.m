@@ -49,6 +49,9 @@ static NSString *animationKey = @"runLyric";
     
     // just for one line, not support for multi lines label
     label.numberOfLines = 1;
+    label.clipsToBounds = YES;
+    label.textAlignment = NSTextAlignmentCenter;
+    label.baselineAdjustment = UIBaselineAdjustmentAlignBaselines;
     
     textLayer = [CATextLayer layer];
     textLayer.frame = label.bounds;
