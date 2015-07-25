@@ -1,6 +1,7 @@
 # VTXKaraokeLyricView
 An animation change foreground color lyric color for karaoke apps.
-[Demo with music clip](https://www.youtube.com/watch?v=vR8CRxzBMA8)
+
+[Demo with music clip](https://www.youtube.com/watch?v=sqjA5VAcOc0)
 
 ## Screenshot
 <img src="https://www.dropbox.com/s/6n0dxw0hbns1kxs/vtx_karaoke_lyric.gif?raw=1" />
