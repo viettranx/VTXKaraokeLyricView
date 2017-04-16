@@ -9,7 +9,7 @@ An animation change foreground color lyric color for karaoke apps.
 ## Usage
 - Import folder VTXKaraokeView classes into your project and import header:
 ```
-#import "VTXKaraokeLyricView.h"
+# import "VTXKaraokeLyricView.h"
 ```
 It is a subclass from UILabel, so you can use all UILabel properties such as: Font, textColor, ....
  
